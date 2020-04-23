@@ -1,4 +1,4 @@
-# Module for prefix     trees
+# Module for prefix trees
 import pickle
 import re
 
