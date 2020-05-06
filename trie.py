@@ -82,18 +82,6 @@ def clean(string):
     return string
 
 
-
-if __name__ == '__mai__':
-    tree = trie()
-    tree.add("abhay")
-    tree.add("abate")
-    tree.add("absolutely")
-    tree.add("habit")
-    print("Vocab - ")
-    tree.print_vocab(tree.root)
-    print("words with ab -")
-    tree.words_with("ab")
-
 if __name__ == "__main__":
     vocab = trie()
     text = open("Where_eagles_dare.txt", "r+")

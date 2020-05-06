@@ -20,6 +20,6 @@ player.purge_errors()
 print('The model has updated its vocab after reading the file.')
 obj_file = open("player_vocab.pickle", 'wb')
 
-obj_file.write(pickle.dumps(player))
+pickle.dump(player, obj_file)
 obj_file.close()
 
