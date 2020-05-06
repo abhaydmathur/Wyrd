@@ -11,7 +11,7 @@ We are simply using prefix trees at the moment for the model's vocabulary.
 
 ### Commands:
 #### show 
-Returns the list of possible words in the current context from the dictionary.
+Returns the list of possible words in the current context from the vocabulary.
 #### stop 
 Checks whether a word has been formed; scores accordingly
 #### exit()
