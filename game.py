@@ -2,6 +2,7 @@ from trie import trie
 import pickle
 import sys
 import numpy as np
+import os
 
 def load_model(file_name):
     obj_file = open(file_name, 'rb')
@@ -17,10 +18,13 @@ class player(object):
         self.score = 0
     
     def play(self, word):
+        if(len(word)==0):
+            self.current_node = np.random.choice(self.current_node.children)
+            return word + self.current_node.val
         last_char = word[-1]
         if(last_char in [child.val for child in self.current_node.children]):
             self.current_node = [child for child in self.current_node.children if child.val == last_char][0]
-            if len(self.current_node.children) == 0:
+            if len(self.current_node.children) == 0 or self.current_node.isend:
                 self.stop()
             else:
                 self.current_node = np.random.choice(self.current_node.children) 
@@ -28,11 +32,19 @@ class player(object):
                 word = word + self.current_node.val
         else:
             print("SHOW")
-            self.show()
+            self.get_show()
         return word
 
-    def show(self):
+    def show(self, pref):
+        self.vocab_tree.words_with(pref)
+
+    def get_show(self):
+        print("Show")
         pass
+
+    def stop_response(self):
+        if not (self.current_node.isend):
+            self.get_show()
 
     def stop(self):
         global done
@@ -47,14 +59,27 @@ def main():
     word = ""
     print("WORD BUILDING")
     while not done:
+        
         print(word)
         ch = (input('>> '))
         if ch.lower() == 'stop':
+            bot.stop_response()
+            done = True
             break
         elif ch.lower() == 'exit()':
             sys.exit()
+        elif ch.lower() == 'show':
+            bot.show(word)
+            done = True
+            break
+        elif len(ch) > 1:
+            print("Invalid command\n")
+            continue
         word = word + ch
         word = bot.play(word)
-
-while True:
-    main()
+    input("Enter any char to continue\n")
+        
+if __name__ == "__main__":
+    while True:
+        os.system("clear")
+        main()

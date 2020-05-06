@@ -30,7 +30,7 @@ class trie(object):
                     if val == a:
                         curr = curr.children[j]
                         break   
-            if i == len(word) - 1:
+            if i == len(word) - 1 and len(word) >= 4:
                 curr.isend = True
         return None
 
@@ -64,7 +64,10 @@ class trie(object):
                 if a == char:
                     curr = curr.children[i]
                     break
-        self.print_vocab(curr,  False, pre)
+        if curr.val == pre[-1]:
+            self.print_vocab(curr,  False, pre)
+        else :
+            print("No such words in this vocab.")
 
     def clear(self):
         for child in self.root.children:
