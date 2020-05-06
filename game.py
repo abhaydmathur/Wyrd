@@ -22,9 +22,10 @@ class player(object):
             self.current_node = [child for child in self.current_node.children if child.val == last_char][0]
             if len(self.current_node.children) == 0:
                 self.stop()
-            self.current_node = np.random.choice(self.current_node.children) 
-            print("Move : ", self.current_node.val)
-            word = word + self.current_node.val
+            else:
+                self.current_node = np.random.choice(self.current_node.children) 
+                print("Move : ", self.current_node.val)
+                word = word + self.current_node.val
         else:
             print("SHOW")
             self.show()
@@ -34,20 +35,26 @@ class player(object):
         pass
 
     def stop(self):
-        print("STOP")
-        sys.exit()
+        global done
+        print("STOP\n ")
+        done = True
         
     
 def main():
+    global done 
+    done = False
     bot = player(load_model('player_vocab.pickle'))
     word = ""
     print("WORD BUILDING")
-    while True:
+    while not done:
         print(word)
         ch = (input('>> '))
         if ch.lower() == 'stop':
             break
+        elif ch.lower() == 'exit()':
+            sys.exit()
         word = word + ch
         word = bot.play(word)
 
-main()
+while True:
+    main()
