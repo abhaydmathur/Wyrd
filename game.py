@@ -3,6 +3,7 @@ import pickle
 import sys
 import numpy as np
 import os
+import dict
 
 def load_model(file_name):
     obj_file = open(file_name, 'rb')
@@ -31,7 +32,6 @@ class player(object):
                 print("Move : ", self.current_node.val)
                 word = word + self.current_node.val
         else:
-            print("SHOW")
             self.get_show()
         return word
 
@@ -39,12 +39,18 @@ class player(object):
         self.vocab_tree.words_with(pref)
 
     def get_show(self):
+        global done
         print("Show")
-        pass
+        word_ = input("~> ")
+        if dict.check(word_):
+            print("You're right; didn't think of that one :) ")
+        else:
+            print("I knew you were bluffing ;) ")
+        done = True
 
-    def stop_response(self):
-        if not (self.current_node.isend):
-            self.get_show()
+    def stop_response(self, word):
+        if not (dict.check(word)):
+            print("No bluffing.")
 
     def stop(self):
         global done
@@ -63,7 +69,7 @@ def main():
         print(word)
         ch = (input('>> '))
         if ch.lower() == 'stop':
-            bot.stop_response()
+            bot.stop_response(word)
             done = True
             break
         elif ch.lower() == 'exit()':
