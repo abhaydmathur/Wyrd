@@ -32,17 +32,21 @@ class player(object):
                 print("Move : ", self.current_node.val)
                 word = word + self.current_node.val
         else:
-            self.get_show()
+            self.get_show(word)
         return word
 
     def show(self, pref):
         self.vocab_tree.words_with(pref)
 
-    def get_show(self):
+    def get_show(self, word):
         global done
         print("Show")
         word_ = input("~> ")
-        if dict.check(word_):
+        if not word in word_:
+            print(f"What? We're talking about something that starts with {word.upper()} .")
+            self.get_show(word)
+            return
+        elif dict.check(word_):
             print("You're right; didn't think of that one :) ")
         else:
             print("I knew you were bluffing ;) ")
