@@ -1,7 +1,7 @@
-# Building a model to play Word Building 
+# Word Building 
 
 Rules of the game:</br>
-    1. We just need to build words letter by letter. The objective is to manipulate moves such that the 
+    1. Build words letter by letter. The objective is to manipulate moves such that the 
     last alphabet is entered by the opponent or one of the opponents</br>
     2. If at any point in time a sequence has been created which does not form a prefix to any word in our
     vocabulary, then the current player asks the previous player to disclose the word they're trying to form.</br>
