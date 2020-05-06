@@ -90,7 +90,7 @@ For a brief moment only Smith's face registered total disbelief then quickly ret
 stillness.
 'Well, well.' He retrieved his coffee. 'Somebody should tell them down there. The lights are supposed to
 be out all overEurope .'
-'Not inSwitzerland , sir,' the sergeant explained patiently. 'That'sBasle .'
+'Not inSwitzerland , sir,' the sergeant explained patiently. 'That's Basle .'
 'Basle?' Smith stared at him. 'Basle! Good God, he's gone seventy or eighty miles off course. The flight
 plan routed us north ofStrasbourg .'
 'Yes, sir.' The sergeant air-gunner was unabashed. 'The Wing Commander says he doesn't understand
@@ -148,7 +148,7 @@ Colonel Wyatt-Turner, had gravely and reluctantly briefed them on what they had 
 reluctantly admitted to be a mission born from the sheerest desperation. 
 'Deucedly sorry and all that, chaps, but time is of the essence.' Wyatt-Turner, a big, red-faced, heavily
 moustached colonel, tapped his cane against a. wall-map ofGermany , pointing to a spot just north of the
-Austrian border and a little west ofGarmisch-Partenkirchen . 'Our man was brought down here at2 a.m.
+Austrian border and a little west ofGarmisch-Partenkirchen . 'Our man was brought down here at 2 a.m.
 this morning but SHAEF, in their all-knowing wisdom, didn't let us know until10 a.m. Damned idiots!
 Damned idiots for not letting us know until so late and double-damned idiots for ignoring our advice in
 the first place. Gad, will they never learn to listen to us?' He shook his head in anger, tapped the map
@@ -401,7 +401,7 @@ Carpenter had it now. It was more imagined than real, more guessed at than seen,
 Then gradually, almost imperceptibly, ahead and a little to the right of the direction of flight, he became
 aware of something more solidly tangible than wishful thinking beginning to materialise out of the
 nothingness. And then, suddenly, it wasn't materialising any more, it was solidly, unmistakably there, the
-smooth, unbroken side of an almost vertically towering mountain soaring up at a dizzy 80§ until it
+smooth, unbroken side of an almost vertically towering mountain soaring up at a dizzy until it
 vanished in the grey darkness above. Carpenter withdrew his head, leaving the screen open this time, and
 pressed his head-switch.
 'Sergeant Johnson?' The words came out stiffly, mechanically, not because of any crisis of emotion that
@@ -491,7 +491,7 @@ Down there at ground level--if seven thousand feet up on the Weissspitze could b
 level--the snowfall was comparatively slight compared to that blizzard they'd experienced jumping from
 the Lancaster but, even so, visibility was almost as bad as it had been up above, for there was a
 twenty-knot wind blowing and the dry powdery snow was drifting quite heavily. Smith made a swift
-360§ sweep of his horizon but there was nothing to be seen, nobody to be seen.
+three-sixty degree sweep of his horizon but there was nothing to be seen, nobody to be seen.
 With fumbling frozen hands he clumsily extracted œ torch and whistle from his tunic. Facing alternately
 east and west, he bleeped on the whistle and flashed his torch. The first to appear was Thomas, then
 Schaffer, then, within two minutes altogether, all of the others with the exception of Sergeant Harrod.
@@ -1048,7 +1048,7 @@ down. He followed the tracks uphill, whistling 'Lorelei', but whistling softly: 
 travelled dangerously far. He stopped whistling when Mary appeared from where she had been hiding
 behind a fallen pine.
 'Hallo, darling,' she said brightly.
-'We'll have less of the "darlings",' Smith said briskly. 'It's8 a.m. Father Machree awaits. And keep your 
+'We'll have less of the "darlings",' Smith said briskly. 'It's 8 a.m. Father Machree awaits. And keep your 
 voice down.'
 He sat on the fallen tree, cranked the handle and established contact almost immediately. The
 transmission fromLondon was still very faint but clearer than it had been in the earlier hours of the
@@ -1551,7 +1551,7 @@ Satisfied that he was unobserved, Smith turned to the left, took two steps and b
 he tripped over some unseen object and fell his length in the snow. He rolled over three times in the snow
 just in case any bystander might have a knife or gun and homicidal ideas about using them, then got to his
 feet with cat-like speed, his Mauser in one hand, his pencil-flash in the other. He snapped on the torch
-and swung round in a 360§ turn. He was alone.
+and swung round in a three-sixty degree turn. He was alone.
 Alone, that was, but for the crumpled form over which he had tripped, an Alpenkorps sergeant lying
 face-down in the snow, a form lying still and curiously relaxed in that huddled shapelessness of death. 
 Smith stooped and rolled the figure over to expose the great red stain in the snow where the body had
@@ -3827,7 +3827,7 @@ beside some highly inflammable-looking cardboard cartons.
 Smith, meanwhile, had ushered the others from the still smoke-filled, eye-watering, throat-irritating
 atmosphere of the radio room into the comparatively purer air of the passageway beyond, and was
 waiting the return of Schaffer when his face became suddenly thoughtful at the sight of some fire-fighting
-gear -- a big CO2 extinguisher, buckets of sand and a fireman's axe -- on a low platform by the passage
+gear -- a big carbon dioxide extinguisher, buckets of sand and a fireman's axe -- on a low platform by the passage
 wall.
 'You are slipping, Major Smith.' Mary's eyes were red-rimmed and her tear-streaked face white as
 paper, but she (could still smile at him. 'Distractions, you said. I've had the same thought myself, and I'm
@@ -3840,7 +3840,7 @@ It certainly looked like a Records Office. The room was heavily shelved and pile
 and papers. Smith crossed to the window, opened it wide to increase the draught then scattered large
 piles of paper on the floor and put a match to them. The paper flared up at once, the flames feet high
 within seconds. 
-'Kinda forgot this, didn't you?' Schaffer had returned and was bearing with him the large CO2 cylinder.
+'Kinda forgot this, didn't you?' Schaffer had returned and was bearing with him the large carbon dioxide cylinder.
 He crossed to the window. 'Gardyloo or mind your heads or whatever the saying is.'
 The cylinder disappeared through the open window. The room was already so furiously ablaze that
 Schaffer had difficulty in finding his way back to the door again. As he stumbled out, his clothes and hair
@@ -3865,7 +3865,7 @@ descended, and then ù the footsteps stopped abruptly. From the next shouted wor
 they had just caught sight of the fire and had abruptly and for the first time realised the magnitude of the
 task they had to cope with. 
 'Emergency! Sergeant, get on that phone!' It was the voice of the Oberleutnant who had led the break-in
-to the radio room. 'Fire detail at the double! Hoses, more CO2 cylinders. Where in God's name is
+to the radio room. 'Fire detail at the double! Hoses, more carbon dioxide cylinders. Where in God's name is
 Colonel Kramer. Corporal! Find Colonel Kramer at once.'
 The corporal didn't answer, the sound of jutting heels striking the treads as he raced down the stairs was
 answer enough. He ran by the alcove and ran down the next flight of stairs until the sound of his footfalls
@@ -3998,7 +3998,7 @@ cable then over-handing himself up inside the station.. Schaffer wasted no time 
 was physically possible. It had to be possible. There was no other way in.
 Carefully and with no little difficulty Schaffer inched himself back up the rope and the slope of the roof
 until he was about three feet clear of the edge. He eased his foot-grip on the rope and swung round
-through 180§ until he was once more facing up the slope with his legs now dangling over the edge. He
+through one-eighty degrees until he was once more facing up the slope with his legs now dangling over the edge. He
 looked up. The crouched figure of Smith showed tension in every line although the face was as
 expressionless as ever. Schaffer lifted one hand, made a circle with thumb and forefinger, then eased
 himself over the edge until his searching feet found the cable.
@@ -4502,7 +4502,7 @@ Thomas, with two sound hands and faster reactions, had succeeded in saving himse
 He glanced up and saw where the roof was beginning to buckle and break as the forward two
 suspension arm support brackets, now subjected to a wrenching lateral pressure they had never been
 designed to withstand, began to tear their retaining bolts free. Thomas struggled up the steeply inclined
-floor till he stood in the front doorway: because of the tilt of the car, now almost 45§ as the front
+floor till he stood in the front doorway: because of the tilt of the car, now almost forty-five degrees as the front
 supports worked loose, the leading edge of the roof was almost touching the car. Thomas reached up,
 grabbed the cable with both hands, and had just cleared his legs from the doorway when the two front
 supports tore free fram the roof in a rending screech of metal. The cable-car fell away, slowly turning end
@@ -4818,7 +4818,7 @@ running towards and scrambling aboard trucks and command cars and they weren't w
 about it either. 
 'A hive of activity and no mistake,' Schaffer observed. 'I wonder -- ' He broke off, his eyes widening. A
 giant tank came rumbling into view past the guard-house, turned right on to the road, stopped, swivelled
-180§ on its tracks, completely blocking the road: the gun turret moved fractionally until it was lined up on
+about on its tracks, completely blocking the road: the gun turret moved fractionally until it was lined up on
 the headlights of the approaching bus. ,'Oh, my gosh!' Schaffer's shocked whisper was just audible over
 the fading sound of the post-bus's diesel. 'A Tiger tank. And that's an 88-millimetre cannon, boss.'
 'It's not a pop-gun, and that's a fact,' Smith agreed. 'Flat on the -floor.' He reached forward, pulled a
@@ -5014,7 +5014,7 @@ the runway, and had the bus itself moving, accelerating quickly through the gear
 down over the top of the bus and settled down beautifully without the slightest suspicion of a bounce.
 Within a minute Schaffer brought the bus to a skidding halt only yards from the now stationary plane. Half
 a minute later, with all five of them safely inside the plane, Carpenter had the Mosquito turned through
-180§ and was standing hard on the brakes as he brought the engines up to maximum revolutions. And
+a complete turn and was standing hard on the brakes as he brought the engines up to maximum revolutions. And
 then they were on their way, gathering speed so rapidly that they were air-borne two hundred yards
 before the end of the runway. For the first mile of their climb Carpenter kept the plane heading almost
 directly towards the blazing castle that now redly illuminated the entire valley, then the funeral pyre of the

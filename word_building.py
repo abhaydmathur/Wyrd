@@ -11,6 +11,7 @@ def load_model(file_name):
     tree = pickle.load(obj_file)
     return tree
 
+
 class player(object):
     
     def __init__(self, vocab_tree):
@@ -19,6 +20,7 @@ class player(object):
         self.score = 0
     
     def play(self, word):
+        
         if(len(word)==0):
             self.current_node = np.random.choice(self.current_node.children)
             return word + self.current_node.val
@@ -90,6 +92,7 @@ def main():
     input("Enter any char to continue\n")
         
 if __name__ == "__main__":
+    print('\33]0;Wyrd\a', end='', flush=True)
     while True:
         os.system("clear")
         main()
