@@ -10,12 +10,15 @@ from trie import trie
 
 player = trie()
 
-fil = open("Resources/" + file_name, "r")
-text = fil.read()
-words = re.split(r'\W+', text)
-for word in words:
-    player.add(word)
-player.purge_errors()
+with open('Resources/booklist.txt') as booklist:
+    books = booklist.readlines()
+    for book in books:
+        fil = open("Resources/" + book[:-1] )#+ ".txt", "r")
+        text = fil.read()
+        words = re.split(r'\W+', text)
+        for word in words:
+            player.add(word)
+        player.purge_errors()
 
 print('The model has updated its vocab after reading the file.')
 obj_file = open("player_vocab.pickle", 'wb')
