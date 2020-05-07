@@ -2,6 +2,7 @@ def check(word):
     with open('words_alpha.txt') as f:
         datafile = f.readlines()
         for line in datafile:
+
             line = line[:-1]
             if word == line:
                 return True
