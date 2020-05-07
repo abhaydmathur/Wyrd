@@ -1,5 +1,5 @@
 def check(word):
-    with open('words_alpha.txt') as f:
+    with open('Resources/words_alpha.txt') as f:
         datafile = f.readlines()
         for line in datafile:
 
@@ -8,5 +8,8 @@ def check(word):
                 return True
     return False
 
+def print_meaning(word):
+    pass
+
 if __name__ == "__main__":
-    print(check('kow'))
+    print(check('lugubrious'))

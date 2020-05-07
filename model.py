@@ -10,7 +10,7 @@ from trie import trie
 
 player = trie()
 
-fil = open("Where_eagles_dare.txt", "r")
+fil = open("Resources/" + file_name, "r")
 text = fil.read()
 words = re.split(r'\W+', text)
 for word in words:

@@ -87,7 +87,7 @@ def clean(string):
 
 if __name__ == "__main__":
     vocab = trie()
-    text = open("Where_eagles_dare.txt", "r+")
+    text = open("Resources/Where_eagles_dare.txt", "r+")
     text = text.read()
     words = re.split(r'\W+', text)
     for word in words:
