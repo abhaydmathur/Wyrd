@@ -39,13 +39,14 @@ class player(object):
 
     def show(self, pref):
         self.vocab_tree.words_with(pref)
+        
 
     def get_show(self, word):
         global done, user_score
         print("Show")
         word_ = input("~> ")
-        if not word in word_:
-            print(f"What? We're talking about something that starts with {word.upper()} .")
+        if not word in word_ or len(word_) < 4 :
+            print(f"What? We're talking about something that starts with {word.upper()}, of length greater or equal to 4.")
             self.get_show(word)
             return
         elif dict.check(word_):
@@ -71,7 +72,7 @@ class player(object):
         
     
 def main(bot_):
-    global done
+    global done, user_score
     done = False
     word = ""
     bot = player(load_model('player_vocab.pickle'))
@@ -89,7 +90,7 @@ def main(bot_):
         elif ch.lower() == 'show':
             if len(word):
                 bot.show(word)
-                bot.score -= 1
+                user_score -= 1
                 done = True
                 break
             else:

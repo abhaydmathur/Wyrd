@@ -21,8 +21,3 @@ Does what one might think it does.
 -1 per penalty.<br>
 
 Pro tip: Simply press Enter to let the bot start.
-
-
-
-
-

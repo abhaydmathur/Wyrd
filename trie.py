@@ -2,6 +2,13 @@
 import pickle
 import re
 
+def isWord(word):
+    for ch in word:
+        if not ('a' <= ch.lower() <= 'z' ):
+            return False
+    return True
+
+
 class node(object):
     def __init__(self, val):
         self.val = val
@@ -19,6 +26,8 @@ class trie(object):
         self.root = node(None)
     
     def add(self, word):
+        if(len(word)<4):
+            return None
         word = word.lower()
         curr = self.root
         for i, a in enumerate(word):
@@ -30,7 +39,7 @@ class trie(object):
                     if val == a:
                         curr = curr.children[j]
                         break   
-            if i == len(word) - 1 and len(word) >= 4:
+            if i == len(word) - 1:
                 curr.isend = True
         return None
 
@@ -94,5 +103,3 @@ if __name__ == "__main__":
         vocab.add(word)
     vocab.purge_errors()
     vocab.print_vocab(vocab.root, True)
-    vocab.clear()
-    print("vocab cleared")
