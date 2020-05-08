@@ -22,6 +22,5 @@ with open('Resources/booklist.txt') as booklist:
 
 print('The model has updated its vocab after reading the file.')
 obj_file = open("player_vocab.pickle", 'wb')
-
 pickle.dump(player, obj_file)
 obj_file.close()

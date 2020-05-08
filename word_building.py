@@ -5,6 +5,12 @@ import numpy as np
 import os
 import dict
 
+def clrscr():
+    if os.name == 'posix':
+        os.system("clear")
+    else:
+        os.system('cls')
+
 def load_model(file_name):
     obj_file = open(file_name, 'rb')
     tree = trie()
@@ -52,12 +58,14 @@ class player(object):
         elif dict.check(word_):
             print("You're right; didn't think of that one :) ")
             self.score -= 1
+            self.vocab_tree.add(word_)
         else:
             print("I knew you were bluffing ;) ")
             user_score -= 1
         done = True
 
     def stop_response(self, word):
+        global user_score
         if not (dict.check(word)):
             print("No bluffing.")
             user_score -= 1
@@ -99,7 +107,7 @@ def main(bot_):
         elif len(ch) > 1:
             print("Invalid command\n")
             continue
-        word = word + ch
+        word = word + ch.lower()
         word = bot.play(word)
     input("Enter any char to continue\n")
     return bot
@@ -109,7 +117,12 @@ if __name__ == "__main__":
     user_score = 0
     bot = player(load_model('player_vocab.pickle'))
     while True:
-        os.system("clear")
+        clrscr()
         print("WORD BUILDING")
         print(f"Your Score : {user_score} ||  Bot's score : {bot.score}")
         bot  = main(bot)
+    
+    
+    obj_file = open("player_vocab.pickle", 'wb')
+    pickle.dump(player, obj_file)
+    obj_file.close()
