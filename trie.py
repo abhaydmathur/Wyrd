@@ -2,13 +2,13 @@
 import pickle
 import re
 import dict
+import copy
 
 def isWord(word):
     for ch in word:
         if not ('a' <= ch.lower() <= 'z' ):
             return False
     return dict.check(word)
-
 
 class node(object):
     def __init__(self, val):
@@ -42,7 +42,7 @@ class trie(object):
                         break   
             if i == len(word) - 1:
                 curr.isend = True
-        return None
+        return True
 
 
     def print_(self, start_node): #simply printing all the letters in the vocab for now
@@ -68,16 +68,15 @@ class trie(object):
 
     def words_with(self, pre):
         # finding the 
-        curr = self.root
+        curr = copy.deepcopy(self.root)
         for char in pre:
-            for i, a in enumerate([node.val for node in curr.children]):
-                if a == char:
-                    curr = curr.children[i]
-                    break
-        if curr.val == pre[-1]:
-            self.print_vocab(curr,  False, pre)
-        else :
-            print("No such words in this vocab.")
+            c = [node.val for node in curr.children]
+            if( char in c):
+                curr = curr.children[c.index(char)]
+            else:
+                print("No such words in this vocab.")
+                return
+        self.print_vocab(curr,  False, pre)
 
     def clear(self):
         for child in self.root.children:

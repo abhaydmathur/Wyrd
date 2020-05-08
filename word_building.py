@@ -26,6 +26,9 @@ class player(object):
         self.current_node = self.vocab_tree.root
         self.score = 0
     
+    def reset(self):
+        self.current_node = self.vocab_tree.root
+
     def play(self, word):
         
         if(len(word)==0):
@@ -81,12 +84,11 @@ class player(object):
         done = True
         
     
-def main(bot_):
+def main(bot):
     global done, user_score, bored
     done = False
     word = ""
-    bot = player(load_model('player_vocab.pickle'))
-    bot.score = bot_.score
+    bot.reset()
     while not done:
         
         print(word)
@@ -119,13 +121,13 @@ def main(bot_):
 if __name__ == "__main__":
     print('\33]0;Wyrd\a', end='', flush=True)
     user_score = 0
-    bot = player(load_model('player_vocab.pickle'))
+    bot = player(load_model('Resources/player_vocab.pickle'))
     bored = True
     while bored:
         clrscr()
         print("WORD BUILDING")
         print(f"Your Score : {user_score} ||  Bot's score : {bot.score}")
         bot  = main(bot)
-    obj_file = open("player_vocab.pickle", 'wb')
+    obj_file = open("Resources/player_vocab.pickle", 'wb')
     pickle.dump(bot.vocab_tree, obj_file)
     obj_file.close()

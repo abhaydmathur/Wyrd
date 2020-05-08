@@ -1,10 +1,6 @@
 from trie import trie
+import word_building as wb
 
-tree = trie()
+tree = wb.load_model("Resources/player_vocab.pickle")
 
-tree.add("The")
-tree.add("There")
-tree.add("their")
-tree.add("two")
-
-tree.print_vocab(tree.root)
+tree.words_with("aa")
