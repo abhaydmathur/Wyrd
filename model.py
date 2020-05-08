@@ -25,5 +25,3 @@ obj_file = open("player_vocab.pickle", 'wb')
 
 pickle.dump(player, obj_file)
 obj_file.close()
-
-player.words_with('p')
