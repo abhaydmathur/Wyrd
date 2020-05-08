@@ -26,7 +26,7 @@ class trie(object):
         self.root = node(None)
     
     def add(self, word):
-        if(len(word)<4):
+        if (len(word)<4) or not(isWord(word)):
             return None
         word = word.lower()
         curr = self.root
