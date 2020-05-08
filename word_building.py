@@ -115,7 +115,7 @@ def main(bot):
             else:
                 print("Atleast make a move.")
                 continue
-        elif len(ch) > 1:
+        elif  len(ch) != 1 and len(word)>0:
             print("Invalid command\n")
             continue
         word = word + ch.lower()
