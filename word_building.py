@@ -41,7 +41,7 @@ class player(object):
         self.vocab_tree.words_with(pref)
 
     def get_show(self, word):
-        global done
+        global done, user_score
         print("Show")
         word_ = input("~> ")
         if not word in word_:
@@ -50,26 +50,32 @@ class player(object):
             return
         elif dict.check(word_):
             print("You're right; didn't think of that one :) ")
+            self.score -= 1
         else:
             print("I knew you were bluffing ;) ")
+            user_score -= 1
         done = True
 
     def stop_response(self, word):
         if not (dict.check(word)):
             print("No bluffing.")
+            user_score -= 1
+            return
+        self.score -= 1
 
     def stop(self):
-        global done
+        global done, user_score
         print("STOP\n ")
+        user_score -= 1
         done = True
         
     
-def main():
-    global done 
+def main(bot_):
+    global done
     done = False
-    bot = player(load_model('player_vocab.pickle'))
     word = ""
-    print("WORD BUILDING")
+    bot = player(load_model('player_vocab.pickle'))
+    bot.score = bot_.score
     while not done:
         
         print(word)
@@ -79,20 +85,30 @@ def main():
             done = True
             break
         elif ch.lower() == 'exit()':
-            sys.exit()
+            os._exit(1)
         elif ch.lower() == 'show':
-            bot.show(word)
-            done = True
-            break
+            if len(word):
+                bot.show(word)
+                bot.score -= 1
+                done = True
+                break
+            else:
+                print("Atleast make a move.")
+                continue
         elif len(ch) > 1:
             print("Invalid command\n")
             continue
         word = word + ch
         word = bot.play(word)
     input("Enter any char to continue\n")
+    return bot
         
 if __name__ == "__main__":
     print('\33]0;Wyrd\a', end='', flush=True)
+    user_score = 0
+    bot = player(load_model('player_vocab.pickle'))
     while True:
         os.system("clear")
-        main()
+        print("WORD BUILDING")
+        print(f"Your Score : {user_score} ||  Bot's score : {bot.score}")
+        bot  = main(bot)
