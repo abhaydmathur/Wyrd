@@ -2,6 +2,7 @@ from trie import trie
 import pickle
 import sys
 import numpy as np
+import time
 import os
 import dict
 
@@ -66,10 +67,11 @@ class player(object):
 
     def stop_response(self, word):
         global user_score
-        if not (dict.check(word)):
-            print("No bluffing.")
+        if not(dict.check(word)) or len(word) < 4:
+            print("Nope. Real words with length >= 4 only.")
             user_score -= 1
             return
+        self.vocab_tree.add(word)
         self.score -= 1
 
     def stop(self):
@@ -80,7 +82,7 @@ class player(object):
         
     
 def main(bot_):
-    global done, user_score
+    global done, user_score, bored
     done = False
     word = ""
     bot = player(load_model('player_vocab.pickle'))
@@ -94,7 +96,8 @@ def main(bot_):
             done = True
             break
         elif ch.lower() == 'exit()':
-            os._exit(1)
+            bored = False
+            break
         elif ch.lower() == 'show':
             if len(word):
                 bot.show(word)
@@ -109,20 +112,20 @@ def main(bot_):
             continue
         word = word + ch.lower()
         word = bot.play(word)
-    input("Enter any char to continue\n")
+    if bored:
+        input("Enter any char to continue\n")
     return bot
         
 if __name__ == "__main__":
     print('\33]0;Wyrd\a', end='', flush=True)
     user_score = 0
     bot = player(load_model('player_vocab.pickle'))
-    while True:
+    bored = True
+    while bored:
         clrscr()
         print("WORD BUILDING")
         print(f"Your Score : {user_score} ||  Bot's score : {bot.score}")
         bot  = main(bot)
-    
-    
     obj_file = open("player_vocab.pickle", 'wb')
-    pickle.dump(player, obj_file)
+    pickle.dump(bot.vocab_tree, obj_file)
     obj_file.close()
