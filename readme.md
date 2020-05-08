@@ -16,3 +16,13 @@ Returns the list of possible words in the current context from the vocabulary.
 Checks whether a word has been formed; scores accordingly
 #### exit()
 Does what one might think it does.
+
+### Scoring
+-1 per penalty.<br>
+
+Pro tip: Simply press Enter to let the bot start.
+
+
+
+
+
