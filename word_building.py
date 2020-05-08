@@ -6,6 +6,12 @@ import time
 import os
 import dict
 
+def win_title(title):
+    if os.name == 'posix':
+        print(f'\33]0;{title}\a', end='', flush=True)
+    else:
+        os.system(f"title {title}")
+
 def clrscr():
     if os.name == 'posix':
         os.system("clear")
@@ -119,7 +125,8 @@ def main(bot):
     return bot
         
 if __name__ == "__main__":
-    print('\33]0;Wyrd\a', end='', flush=True)
+
+    win_title("Wyrd")
     user_score = 0
     bot = player(load_model('Resources/player_vocab.pickle'))
     bored = True
