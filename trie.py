@@ -1,12 +1,13 @@
 # Module for prefix trees
 import pickle
 import re
+import dict
 
 def isWord(word):
     for ch in word:
         if not ('a' <= ch.lower() <= 'z' ):
             return False
-    return True
+    return dict.check(word)
 
 
 class node(object):
