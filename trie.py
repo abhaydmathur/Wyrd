@@ -44,6 +44,18 @@ class trie(object):
                 curr.isend = True
         return True
 
+    def get_vocab(self, node, word = "", words = []):
+        if(len(word)):
+            assert node != self.root
+        if len(node.children) == 0:
+            words.append(word)
+        else:
+            if node.isend:
+                words.append(word)
+            for child in node.children:
+                self.get_vocab(child, word+child.val, words)
+        return words
+
 
     def print_(self, start_node): #simply printing all the letters in the vocab for now
         for child in start_node.children:
@@ -78,6 +90,17 @@ class trie(object):
                 return
         self.print_vocab(curr,  False, pre)
 
+    def get_words_with(self, pre):
+        curr = self.root
+        for char in pre:
+            c = [node.val for node in curr.children]
+            if( char in c):
+                curr = curr.children[c.index(char)]
+            else:
+                print("No such words in this vocab.")
+                return
+        return self.get_vocab(node = curr, word = pre, words = [])
+
     def clear(self):
         for child in self.root.children:
             self.root.children.remove(child)
@@ -96,10 +119,13 @@ def clean(string):
 
 if __name__ == "__main__":
     vocab = trie()
-    text = open("Resources/Where_eagles_dare.txt", "r+")
+    text = open("Resources/tester.txt", "r+")
     text = text.read()
     words = re.split(r'\W+', text)
     for word in words:
         vocab.add(word)
     vocab.purge_errors()
-    vocab.print_vocab(vocab.root, True)
+    voc = vocab.get_vocab(vocab.root)
+    voc_w_swi = vocab.get_words_with(pre = "s")
+    print(voc_w_swi)
+    vocab.words_with("s")

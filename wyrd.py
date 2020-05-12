@@ -53,17 +53,8 @@ class player(object):
             self.get_show(word)
         return word
 
-    def show_response(self, pref):
-        global words_played, user_score
-        words = self.vocab_tree.get_words_with(pref)
-        valid_words = [word for word in words if word not in words_played]
-        if not len(valid_words):
-            print("Oops.")
-            user_score += 1
-            self.score -= 1
-            return
-        print(valid_words[0])
-        words_played.append(valid_words[0])
+    def show(self, pref):
+        self.vocab_tree.words_with(pref)
         
 
     def get_show(self, word):
@@ -84,15 +75,13 @@ class player(object):
         done = True
 
     def stop_response(self, word):
-        global user_score, words_played
-        if not(dict.check(word)) or len(word) < 4 or word in words_played:
+        global user_score
+        if not(dict.check(word)) or len(word) < 4:
             print("Nope. Real words with length >= 4 only.")
             user_score -= 1
-            return False
-        
+            return
         self.vocab_tree.add(word)
         self.score -= 1
-        return True
 
     def stop(self):
         global done, user_score
@@ -102,7 +91,7 @@ class player(object):
         
     
 def main(bot):
-    global done, user_score, bored, words_played
+    global done, user_score, bored
     done = False
     word = ""
     bot.reset()
@@ -111,14 +100,15 @@ def main(bot):
         print(word)
         ch = (input('>> '))
         if ch.lower() == 'stop':
-            done = bot.stop_response(word)
-            if done : break
+            bot.stop_response(word)
+            done = True
+            break
         elif ch.lower() == 'exit()':
             bored = False
             break
         elif ch.lower() == 'show':
             if len(word):
-                bot.show_response(word)
+                bot.show(word)
                 user_score -= 1
                 done = True
                 break
@@ -128,17 +118,14 @@ def main(bot):
         elif  len(ch) != 1 and len(word)>0:
             print("Invalid command\n")
             continue
-        else:
-            word = word + ch.lower()
-            word = bot.play(word)
+        word = word + ch.lower()
+        word = bot.play(word)
     if bored:
         input("Enter any char to continue\n")
-    words_played.append(word)
     return bot
         
 if __name__ == "__main__":
 
-    words_played = []
     win_title("Wyrd")
     user_score = 0
     bot = player(load_model('Resources/player_vocab.pickle'))
