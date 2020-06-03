@@ -5,3 +5,4 @@ def get_server_address(mode = "local"):
         address = os.popen("hostname -I")
     else:
         address = os.popen("hostname ")
+    return address
