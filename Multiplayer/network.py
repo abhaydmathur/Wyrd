@@ -22,7 +22,7 @@ class Network:
         except:
             pass
         
-    def self.getP(self):
+    def getP(self):
         return self.p 
     
     def send(self, data):
