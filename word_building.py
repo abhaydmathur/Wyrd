@@ -5,6 +5,7 @@ import numpy as np
 import time
 import os
 import dict
+import sst
 
 def win_title(title):
     if os.name == 'posix':
@@ -131,6 +132,7 @@ def main(bot):
         else:
             word = word + ch.lower()
             word = bot.play(word)
+            sst.play_response(word[-1])
     if bored:
         input("Enter any char to continue\n")
     words_played.append(word)
