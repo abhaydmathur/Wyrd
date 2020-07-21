@@ -138,8 +138,8 @@ def main(bot):
     words_played.append(word)
     return bot
         
-if __name__ == "__main__":
 
+def main():
     words_played = []
     win_title("Wyrd")
     user_score = 0
@@ -153,3 +153,6 @@ if __name__ == "__main__":
     obj_file = open("Resources/player_vocab.pickle", 'wb')
     pickle.dump(bot.vocab_tree, obj_file)
     obj_file.close()
+
+if __name__ == "__main__":
+    main()
